@@ -22,23 +22,9 @@ public class HiberRepository {
         return query.getResultList();
     }
 
-    public List<?> getAll() {
-        Query query = entityManager.createQuery(
-                "SELECT persons.cityOfLiving FROM Persons persons " +
-                        "WHERE persons.cityOfLiving = :city", Persons.class);
-        //query.setParameter("city", city);
+    public List<?> getPersonAll() {
+        Query query = entityManager.createQuery("Select persons from Persons persons");
         return query.getResultList();
     }
 
-    public void getCity() {
-        /*var customer = entityManager.find(Customer.class, "1");
-        System.out.println(customer);*/
-        entityManager.persist(Customer.builder()
-                .age(20)
-                .name("Vasya")
-                .surname("Popov")
-                .phoneNumber("+79990002377")
-                .build());
-        //return customer;
-    }
 }

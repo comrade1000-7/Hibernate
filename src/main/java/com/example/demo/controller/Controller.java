@@ -21,14 +21,10 @@ public class Controller {
         return new ResponseEntity<>(repository.getPersonByCity(city), HttpStatus.OK);
     }
 
-    @GetMapping("/hello")
-    public ResponseEntity<?> getPersonByCity() {
-        return new ResponseEntity<>("HELLO, WORLD", HttpStatus.OK);
+    @GetMapping("/all")
+    public ResponseEntity<?> getPersonAll() {
+        return new ResponseEntity<>(repository.getPersonAll(), HttpStatus.OK);
     }
 
-    @GetMapping("/city")
-    public ResponseEntity<?> getCity() {
-        //String response = String.valueOf(repository.getCity());
-        return new ResponseEntity<>("response", HttpStatus.OK);
-    }
+
 }
