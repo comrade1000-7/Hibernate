@@ -9,7 +9,7 @@ import lombok.*;
 @Data
 @Entity
 @IdClass(PrimaryKey.class)
-@Table(name = "PERSONS", schema = "app")
+@Table(name = "persons", schema = "app")
 public class Persons {
 
     @Id
