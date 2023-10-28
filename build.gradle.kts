@@ -23,6 +23,8 @@ repositories {
 
 dependencies {
 	implementation("org.springframework.boot:spring-boot-starter-data-jpa")
+	implementation("org.springframework.boot:spring-boot-starter-security")
+	implementation("org.springframework.boot:spring-boot-starter-thymeleaf:3.1.5")
 	implementation("org.springframework.boot:spring-boot-starter-web")
 	annotationProcessor("org.springframework.boot:spring-boot-configuration-processor")
 	compileOnly("org.projectlombok:lombok")

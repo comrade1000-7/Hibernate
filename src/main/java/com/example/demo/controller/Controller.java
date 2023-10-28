@@ -20,6 +20,21 @@ public class Controller {
         this.personRepository = repository;
     }
 
+    @GetMapping("/")
+    public String getHome() {
+        return "home";
+    }
+
+    @GetMapping("/hello")
+    public String getHello() {
+        return "hello";
+    }
+
+    @GetMapping("/data")
+    public String getData() {
+        return "Secret Data";
+    }
+
     @GetMapping("/persons/by-city")
     public List<Persons> getByCityOfLiving(@RequestParam String city) {
         return personRepository.findByCityOfLiving(city);
